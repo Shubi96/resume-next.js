@@ -2,14 +2,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="flex gap-[448px]">
       <h1 className="text-left text-xl font-bold">Additional Info.</h1>
-      <li className="list-none">
-        <h2>Professional certifications in Python and java.</h2>
-        <h2>client testimonials and communication skills.</h2>
-        <h2>technical skills.</h2>
-        <h2>language skills.</h2>
-      </li>
+      <div className="flex-col items-center justify-center">
+        <h2 className="font-bold text-xl">Name</h2>
+        <li className=""> Professional certifications in Python and java.</li>
+        <li className="">Client testimonials and communication skills.</li>
+        <li className="">Technical skills.</li>
+
+        <li className="">Linguistic skills</li>
+      </div>
     </div>
   );
 };

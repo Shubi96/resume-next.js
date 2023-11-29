@@ -9,9 +9,13 @@ const Header = () => {
           src="/shubham.jpg"
         />
       </div>
-      <h1 className=" font-bold">Shubham Sharma </h1>
+      <h1 className=" text-4xl font-sans">SHUBHAM SHARMA </h1>
       <div className="">
-        <h3 className=" text-xs">82195-66092</h3>
+        <span>
+          <h3 className=" text-xs border-b-[4px] border-black-300">
+            PHONE : 82195-66092
+          </h3>
+        </span>
         <h3 className=" text-xs">shubhamsharmakgt@gmail.com</h3>
         <h3 className=" text-xs">Address : Solan HP </h3>
       </div>

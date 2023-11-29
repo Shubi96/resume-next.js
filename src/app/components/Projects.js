@@ -2,13 +2,14 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="flex gap-[513px]">
       <h1 className="text-left text-xl font-bold">Projects</h1>
-      <li className="list-none">
-        <h2>Shopify Tempalate </h2>
-        <h2>Wordpress Shipping website</h2>
-        <h2>Shopfiy store creation</h2>
-      </li>
+      <div className="flex-col items-center justify-center">
+        <h2 className="font-bold text-xl">Name</h2>
+
+        <li className="">Shopfiy store creation</li>
+        <li className="">Wordpress Shipping website </li>
+      </div>
     </div>
   );
 };
