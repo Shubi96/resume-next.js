@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="w-[100%] bg-blue-400 flex items-center p-5 gap-5">
+    <nav className="w-[100%] bg-blue-300 flex items-center p-5 gap-5">
       <Link href="/" className="list-none cursor-pointer">
         Home
       </Link>
