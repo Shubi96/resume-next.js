@@ -2,21 +2,50 @@ import React from "react";
 
 function Experience() {
   return (
-    <div className="flex gap-[490px]">
-      <h1 className="text-left text-xl font-bold">Experience </h1>
-      <div className="flex-col items-center justify-center">
-        <h1 className="font-bold text-xl">Preffer Groups</h1>
-        <li className="list-none">
-          <h2>1. DBUGLAB Pvt Ltd </h2>
-          <h2>Location : Mohali, SAS Nagar</h2>
-        </li>
-      </div>
-      <div className="flex-col items-center justify-center ml-[290px]">
-        <h1 className="font-bold text-xl">Years </h1>
-        <li className="list-none">
-          <h2>1.5 Years</h2>
-          <h2>(Dec-2021 to Spt-2023)</h2>
-        </li>
+    <div className="container mx-auto p-8">
+      <div className="lg:flex gap-8">
+        <div className="mb-8 lg:w-1/2">
+          <h1 className="text-left text-3xl font-bold mb-4 lg:mb-6">
+            Experience
+          </h1>
+          <div className="flex-col items-start justify-start">
+            <h2 className="font-bold text-2xl mb-2">Preffer Groups</h2>
+            <ul className="list-disc pl-4">
+              <li className="mb-2">
+                <strong>Company:</strong> DBUGLAB Pvt Ltd
+              </li>
+              <li className="mb-2">
+                <strong>Location:</strong> Mohali, SAS Nagar
+              </li>
+              <li className="mb-2">
+                <strong>Position:</strong> Software Developer
+              </li>
+              <li className="mb-2">
+                <strong>Duration:</strong> December 2021 to September 2022
+              </li>
+              <li className="mb-2">
+                <strong>Responsibilities:</strong>
+                <ul className="list-disc pl-4">
+                  <li className="mb-1">
+                    Developing and maintaining web applications.
+                  </li>
+                  <li className="mb-1">
+                    Collaborating with cross-functional teams.
+                  </li>
+                  <li className="mb-1">
+                    Troubleshooting and debugging issues.
+                  </li>
+                  {/* Add more responsibilities as needed */}
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Add another experience or additional content in the second half */}
+        <div className="mb-8 lg:w-1/2">
+          {/* Add another experience or additional content here */}
+        </div>
       </div>
     </div>
   );

@@ -2,70 +2,49 @@ import React from "react";
 
 const Education = () => {
   return (
-    <div>
-      <div className="flex gap-[500px]">
-        <h1 className="text-left text-xl font-bold">Education </h1>
-        <div className="flex-col items-center justify-center">
-          <h1 className="font-bold text-xl">Institutions</h1>
-          <nav className="">
-            <li className="">
-              10th DAV Shimla
-              {/* <h2>
-                <span className="bullet">&#8226;</span>10th DAV Shimla
-              </h2> */}
-            </li>
-            <li className="">
-              12th GSSS Kandaghat Solan
-              {/* <h2>
-                <span className="bullet">&#8226;</span>12th GSSS Kandaghat Solan{" "}
-              </h2> */}
-            </li>
-            <li className="italic">
-              Bachelor of Computer Application Shimla 2015-2018
-              {/* <h2 className=" italic">
-                <span className="bullet">&#8226;</span>Bachelor of Computer
-                Application Shimla 2015-2018
-              </h2> */}
-            </li>
-            <li className="italic">
-              Master of Computer Application Bhara Univ Solan HP 2019-2020
-              {/* <h2 className="italic">
-                <span className="bullet">&#8226;</span>Master of Computer
-                Application Bhara Univ Solan HP 2019-2020
-              </h2> */}
-            </li>
-          </nav>
+    <div className="container mx-auto p-8">
+      <div className="lg:flex gap-8">
+        <div className="mb-8 lg:w-1/2">
+          <h1 className="text-left text-3xl font-bold mb-4 lg:mb-6">
+            Education
+          </h1>
+          <div className="flex-col items-start justify-start">
+            <h2 className="font-bold text-2xl mb-2">Institutions</h2>
+            <ul className="list-disc pl-4">
+              <li className="mb-2">
+                <strong>10th:</strong> DAV Shimla
+              </li>
+              <li className="mb-2">
+                <strong>12th:</strong> GSSS Kandaghat Solan
+              </li>
+              <li className="mb-2 italic">
+                <strong>Bachelor of Computer Application:</strong> Shimla
+                2015-2018
+              </li>
+              <li className="mb-2 italic">
+                <strong>Master of Computer Application:</strong> Bhara Univ
+                Solan HP 2019-2020
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="flex-col items-center justify-center">
-          <h1 className="font-bold text-xl">MARKS</h1>
-          <nav className="">
-            <li className="">
-              6.6 CGPA
-              {/* <h2>
-                {" "}
-                <span className="bullet">&#8226;</span>6.6 CGPA
-              </h2> */}
+
+        <div className="mb-8 lg:w-1/2">
+          <h2 className="text-3xl font-bold mb-4 lg:mb-6">Marks</h2>
+          <ul className="list-disc pl-4">
+            <li className="mb-2">
+              <strong>10th:</strong> 6.6 CGPA
             </li>
-            <li className="">
-              60%
-              {/* <h2>
-                <span className="bullet">&#8226;</span> 60 %
-              </h2> */}
+            <li className="mb-2">
+              <strong>12th:</strong> 60%
             </li>
-            <li className="">
-              6.6 CGPA
-              {/* <h2>
-                <span className="bullet">&#8226;</span>6.6 CGPA
-              </h2> */}
+            <li className="mb-2">
+              <strong>BCA:</strong> 6.6 CGPA
             </li>
-            <li className="">
-              7.4 CGPA
-              {/* <h2>
-                {" "}
-                <span className="bullet">&#8226;</span>7.4 CGPA
-              </h2> */}
+            <li className="mb-2">
+              <strong>MCA:</strong> 7.4 CGPA
             </li>
-          </nav>
+          </ul>
         </div>
       </div>
     </div>

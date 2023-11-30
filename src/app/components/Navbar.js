@@ -3,24 +3,24 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="w-[100%] bg-blue-300 flex items-center p-5 gap-5">
-      <Link href="/" className="list-none cursor-pointer">
-        Home
+    <nav className="w-full bg-blue-300 flex items-center p-4 lg:px-10 gap-4">
+      <Link href="/">
+        <span className="cursor-pointer">Home</span>
       </Link>
-      <Link href="/education" className="list-none cursor-pointer">
-        Education
+      <Link href="/education">
+        <span className="cursor-pointer">Education</span>
       </Link>
-      <Link href="/experience" className="list-none cursor-pointer">
-        Experience
+      <Link href="/experience">
+        <span className="cursor-pointer">Experience</span>
       </Link>
-      <Link href="/skills" className="list-none cursor-pointer">
-        Skills
+      <Link href="/skills">
+        <span className="cursor-pointer">Skills</span>
       </Link>
-      <Link href="/projects" className="list-none cursor-pointer">
-        Projects
+      <Link href="/projects">
+        <span className="cursor-pointer">Projects</span>
       </Link>
     </nav>
   );
 };
 
-export default Navbar; //rafce
+export default Navbar;

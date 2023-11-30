@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="border-b-[4px] border-black mt-[3px]">
+      <div className="border-b-[2px] order-black-400  mt-[3px]">
         <Header />
       </div>
       <div className="border-b-[2px] border-black-400 mt-[3px]">
-        <Education />
+        <Projects />
       </div>
       <div className="border-b-[2px] border-black-400 mt-[3px]">
         <Experience />
@@ -23,8 +23,9 @@ export default function Home() {
       <div className="border-b-[2px] border-black-400 mt-[3px]">
         <Skills />
       </div>
+
       <div className="border-b-[2px] border-black-400 mt-[3px]">
-        <Projects />
+        <Education />
       </div>
       <div className="border-b-[2px] border-black-400 mt-[3px]">
         <Footer />
