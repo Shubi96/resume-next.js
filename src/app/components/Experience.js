@@ -21,7 +21,7 @@ function Experience() {
                 <strong>Position:</strong> Software Developer
               </li>
               <li className="mb-2">
-                <strong>Duration:</strong> December 2021 to September 2022
+                <strong>Duration:</strong> December 2021 to September 2023
               </li>
               <li className="mb-2">
                 <strong>Responsibilities:</strong>
