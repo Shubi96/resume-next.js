@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="container mx-auto p-8">
+    <div id="skills" className="container mx-auto p-8">
       <div className="lg:flex gap-8">
         <div className="mb-8 lg:w-1/2">
           <div className="flex-col items-start justify-start">

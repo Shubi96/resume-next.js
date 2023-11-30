@@ -2,7 +2,7 @@ import React from "react";
 
 const Education = () => {
   return (
-    <div className="container mx-auto p-8">
+    <div id="education" className="container mx-auto p-8">
       <div className="lg:flex gap-8">
         <div className="mb-8 lg:w-1/2">
           <h1 className="text-left text-3xl font-bold mb-4 lg:mb-6">
