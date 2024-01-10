@@ -18,9 +18,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <strong>Client testimonials:</strong> Communication skills.
                 </li>
-                <li className="mb-2">
-                  <strong>Technical skills.</strong>
-                </li>
+
                 <li className="mb-2">
                   <strong>Linguistic skills.</strong>
                 </li>

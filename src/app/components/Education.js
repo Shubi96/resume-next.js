@@ -12,18 +12,18 @@ const Education = () => {
             <h2 className="font-bold text-2xl mb-2">Institutions</h2>
             <ul className="list-disc pl-4">
               <li className="mb-2">
-                <strong>10th:</strong> DAV Shimla
+                <strong>10th:</strong> DAV Lakkar Bazaar Shimla
               </li>
               <li className="mb-2">
-                <strong>12th:</strong> GSSS Kandaghat Solan
+                <strong>12th:</strong> Govt Sen. Sec School Kandaghat Solan HP
               </li>
               <li className="mb-2 italic">
-                <strong>Bachelor of Computer Application:</strong> Shimla
-                2015-2018
+                <strong>Bachelor of Computer Application:</strong> Rajeev Gandhi
+                Degree College Shimla [ 2015-2018]
               </li>
               <li className="mb-2 italic">
-                <strong>Master of Computer Application:</strong> Bhara Univ
-                Solan HP 2019-2020
+                <strong>Master of Computer Application:</strong> Bhara
+                University Shimla Hills HP [ 2019-2021 ]
               </li>
             </ul>
           </div>

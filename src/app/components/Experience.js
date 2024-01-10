@@ -18,10 +18,11 @@ function Experience() {
                 <strong>Location:</strong> Mohali, SAS Nagar
               </li>
               <li className="mb-2">
-                <strong>Position:</strong> Software Developer
+                <strong>Position:</strong> Web Application Developer
               </li>
               <li className="mb-2">
-                <strong>Duration:</strong> December 2021 to September 2023
+                <strong>Duration:</strong> December 2021 to September 2023 (1.8
+                Years)
               </li>
               <li className="mb-2">
                 <strong>Responsibilities:</strong>
