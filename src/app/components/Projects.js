@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+import { Button, ButtonGroupButtonContext } from "@mui/material";
 
 const Projects = () => {
   return (
@@ -201,6 +203,29 @@ const Projects = () => {
               <li>
                 Supabase - Open-source alternative to Firebase for database
                 management.
+              </li>
+              <li>
+                <Button
+                  variant="contained"
+                  style={{
+                    backgroundColor: "#001f3f",
+                    color: "#ffffff",
+                    hover: "",
+                    transition: "background-color 0.3s, color 0.3s", // Added color transition
+                    ":hover": {
+                      backgroundColor: "#333", // Change to the desired color on hover
+                      color: "#000000", // Change to the desired text color on hover
+                    },
+                  }}
+                >
+                  <Link
+                    href="https://github.com/Shubi96/resume-next.js.git"
+                    target="_blank"
+                  >
+                    Here is my GitHub Link Please click
+                  </Link>
+                </Button>
+                {/* Use the Link component to create a clickable link */}
               </li>
               {/* Add more details about the technologies used if necessary */}
             </ul>

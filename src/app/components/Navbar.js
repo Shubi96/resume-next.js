@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
+import ContactModal from "./ContactModal";
 
 const scrollToSection = (id) => {
   const divId = "scroll-" + id;
@@ -23,6 +24,7 @@ const scrollToSection = (id) => {
 };
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const handleHashChange = () => {
       if (window) {
@@ -47,6 +49,10 @@ const Navbar = () => {
   }, []);
   const onClick = (e) => {
     //e.preventDefault();
+  };
+
+  const handleContactUs = (e) => {
+    setOpen(true);
   };
 
   return (
@@ -88,17 +94,16 @@ const Navbar = () => {
             color: "#ffffff",
             transition: "background-color 0.3s, color 0.3s", // Added color transition
           }}
-          onMouseOver={(e) => {
-            e.target.style.backgroundColor = "#FFD700"; // Change to golden on hover
-            e.target.style.color = "#000000"; // Change text color to black on hover
-          }}
-          onMouseOut={(e) => {
-            e.target.style.backgroundColor = "#001f3f"; // Revert to dark blue on mouse out
-            e.target.style.color = "#ffffff"; // Revert text color to white on mouse out
-          }}
+          onClick={handleContactUs}
         >
           Contact Us
         </Button>
+        <ContactModal
+          isOpen={open}
+          onClose={() => {
+            setOpen(false);
+          }}
+        />
       </nav>
       <div style={{ height: 75 }}></div>
     </>
