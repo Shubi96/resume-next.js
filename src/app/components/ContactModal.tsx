@@ -14,6 +14,7 @@ interface ContactModalProps {
 
 const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false); // New state to track submission
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -27,8 +28,20 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const validateMessage = (value: string): boolean => {
     return value.length >= 5 && value.length <= 512;
   };
+  const resetForm = () => {
+    setEmail("");
+    setMessage("");
+    setEmailError("");
+    setMessageError("");
+    setSubmitted(false);
+  };
 
   const handleSubmit = async () => {
+    // Disable submit button after initial submission
+    if (submitted) {
+      return;
+    }
+
     // Validate email
     if (!validateEmail(email)) {
       setEmailError("Please enter a valid email address.");
@@ -62,6 +75,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     if (response.ok) {
       setEmail("");
       setMessage("");
+      setSubmitted(true); // Update the state to indicate submission
+      resetForm();
     }
     onClose();
   };
@@ -86,7 +101,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         <TextField
           error={!!emailError}
           helperText={emailError}
-          disabled={loading}
+          disabled={loading || submitted} // Disable if loading or already submitted
           label="Email"
           variant="outlined"
           fullWidth
@@ -97,7 +112,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         <TextField
           error={!!messageError}
           helperText={messageError}
-          disabled={loading}
+          disabled={loading || submitted} // Disable if loading or already submitted
           label="Message"
           variant="outlined"
           multiline
@@ -115,6 +130,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             transition: "background-color 0.3s, color 0.3s",
             marginTop: 2,
           }}
+          disabled={loading || submitted} // Disable if loading or already submitted
           onClick={handleSubmit}
         >
           {loading ? <CircularProgress /> : "Submit"}
