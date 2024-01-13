@@ -73,12 +73,15 @@ const Navbar = () => {
     scrollToSection(id);
     handleDrawerClose();
   };
-
+  // 013466
   return (
     <>
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          backgroundColor: "#013466",
+        }}
       >
         <Toolbar>
           {/* Hamburger Icon for Drawer */}
@@ -92,6 +95,16 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
+
+          {/* Logo (You can replace the src attribute with your logo URL) */}
+          <div sx={{ flexGrow: 1 }}>
+            <img
+              src="/shubiji.jpg"
+              alt="logo"
+              style={{ maxWidth: "100px", maxHeight: "50px" }}
+            />
+          </div>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <nav className="w-full  flex items-center p-4 lg:px-10 gap-4 hidden md:flex">
               {sections.map((section) => (
@@ -107,11 +120,12 @@ const Navbar = () => {
               ))}
             </nav>
           </Typography>
+
           <Button
             variant="contained"
             style={{
-              backgroundColor: "#001f3f",
-              color: "#ffffff",
+              backgroundColor: "#001FFA",
+              color: "#FFCC33",
               transition: "background-color 0.3s, color 0.3s",
             }}
             onClick={handleContactUs}

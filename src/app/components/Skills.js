@@ -6,7 +6,7 @@ const Skills = () => {
       <div className="lg:flex gap-8">
         <div className="mb-8 lg:w-1/2">
           <div className="flex-col items-start justify-start">
-            <h2 className="font-bold text-2xl mb-2">Technical Skills</h2>
+            <h2 className="font-bold text-3xl mb-2">Technical Skills</h2>
             <ul className="list-disc pl-4">
               <li className="mb-2">JavaScript (ES6+)</li>
               <li className="mb-2">React.js</li>
@@ -20,7 +20,7 @@ const Skills = () => {
         </div>
 
         <div className="mb-8 lg:w-1/2">
-          <h2 className="font-bold text-2xl mb-2">Additional Skills</h2>
+          <h2 className="font-bold text-3xl mb-2">Additional Skills</h2>
           <ul className="list-disc pl-4">
             <li className="mb-2">Version Control (Git)</li>
             <li className="mb-2">Responsive Web Design</li>

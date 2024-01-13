@@ -50,6 +50,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           bgcolor: "background.paper",
           boxShadow: 24,
           p: 4,
+          border: 2,
+          borderRadius: 3,
         }}
       >
         <h2>Contact Us</h2>
@@ -76,9 +78,10 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         <Button
           variant="contained"
           style={{
-            backgroundColor: "#001f3f",
-            color: "#ffffff",
-            transition: "background-color 0.3s, color 0.3s", // Added color transition
+            backgroundColor: "#001FFA",
+            color: "#FFCC33",
+            transition: "background-color 0.3s, color 0.3s",
+            marginTop: 2,
           }}
           onClick={handleSubmit}
         >

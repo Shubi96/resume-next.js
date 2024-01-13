@@ -9,7 +9,7 @@ function Experience() {
             Experience
           </h1>
           <div className="flex-col items-start justify-start">
-            <h2 className="font-bold text-2xl mb-2">Preffer Groups</h2>
+            {/* <h2 className="font-bold text-2xl mb-2">Preffer Groups</h2> */}
             <ul className="list-disc pl-4">
               <li className="mb-2">
                 <strong>Company:</strong> DBUGLAB Pvt Ltd

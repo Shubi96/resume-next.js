@@ -20,11 +20,11 @@ const Social = () => {
   ];
 
   return (
-    <div id="experience" className="container mx-auto p-8">
+    <div id="social" className="container mx-auto p-8">
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <h1 className="text-left text-3xl font-bold mb-4 lg:mb-6">
-            Experience
+            My Social Hub
           </h1>
           <Grid container spacing={2} alignItems="center">
             {socialLinks.map((link, index) => (

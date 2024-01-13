@@ -7,7 +7,7 @@ const Projects = () => {
     <div id="projects" className="container mx-auto p-4 pl-8 ">
       <div className="lg:flex lg:justify-between">
         <div className="mb-4 lg:mb-0">
-          <h1 className="text-left text-2xl font-bold mb-4">
+          <h1 className="text-left text-3xl font-bold mb-4">
             Project Experience
           </h1>
           <div className="flex-col items-center justify-center">

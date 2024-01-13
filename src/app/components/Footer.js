@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container mx-auto">
           <div className="lg:flex gap-4">
             <div className="mb-4 lg:w-1/2">
-              <h1 className="text-left text-xl font-bold mb-2">
+              <h1 className="text-left text-3xl font-bold mb-2 container mx-auto">
                 Additional Info
               </h1>
               <ul className="list-disc pl-4">
