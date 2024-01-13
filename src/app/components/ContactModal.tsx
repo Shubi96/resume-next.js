@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { CircularProgress } from "@mui/material";
 
+// ... (imports)
+
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -14,8 +16,35 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+
+  const validateEmail = (value: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(value);
+  };
+
+  const validateMessage = (value: string): boolean => {
+    return value.length >= 5 && value.length <= 512;
+  };
 
   const handleSubmit = async () => {
+    // Validate email
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    } else {
+      setEmailError("");
+    }
+
+    // Validate message
+    if (!validateMessage(message)) {
+      setMessageError("Message must be between 5 and 512 characters.");
+      return;
+    } else {
+      setMessageError("");
+    }
+
     // Implement API call to save data
     setLoading(true);
     const response = await fetch("/api/contact", {
@@ -36,7 +65,6 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
     }
     onClose();
   };
-  console.log({ email, message });
 
   return (
     <Modal open={isOpen} onClose={onClose}>
@@ -56,6 +84,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
       >
         <h2>Contact Us</h2>
         <TextField
+          error={!!emailError}
+          helperText={emailError}
           disabled={loading}
           label="Email"
           variant="outlined"
@@ -65,6 +95,8 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <TextField
+          error={!!messageError}
+          helperText={messageError}
           disabled={loading}
           label="Message"
           variant="outlined"
