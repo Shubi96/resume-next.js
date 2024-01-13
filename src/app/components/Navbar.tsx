@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import ContactModal from "./ContactModal";
 import MenuIcon from "@mui/icons-material/Menu";
+import Image from "next/image";
 const sections = [
   { id: "home", label: "Home" },
   { id: "education", label: "Education" },
@@ -97,14 +98,10 @@ const Navbar = () => {
           </IconButton>
 
           {/* Logo (You can replace the src attribute with your logo URL) */}
-          <div sx={{ flexGrow: 1 }}>
-            <img
-              src="/shubiji.jpg"
-              alt="logo"
-              style={{ maxWidth: "100px", maxHeight: "50px" }}
-            />
-          </div>
 
+          <div style={{ flexGrow: 1 }}>
+            <Image src="/shubiji.jpg" alt="logo" width={100} height={50} />
+          </div>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <nav className="w-full  flex items-center p-4 lg:px-10 gap-4 hidden md:flex">
               {sections.map((section) => (
